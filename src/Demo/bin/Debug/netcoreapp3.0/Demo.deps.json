@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "Demo/1.0.0": {
+        "dependencies": {
+          "CQRS": "1.0.0"
+        },
+        "runtime": {
+          "Demo.dll": {}
+        }
+      },
+      "CQRS/1.0.0": {
+        "runtime": {
+          "CQRS.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Demo/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CQRS/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

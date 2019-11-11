@@ -1,0 +1,11 @@
+H:\Programming\Fork\poc1\POC1\Demo\bin\Debug\netcoreapp3.0\Demo.deps.json
+H:\Programming\Fork\poc1\POC1\Demo\bin\Debug\netcoreapp3.0\Demo.dll
+H:\Programming\Fork\poc1\POC1\Demo\bin\Debug\netcoreapp3.0\Demo.pdb
+H:\Programming\Fork\poc1\POC1\Demo\bin\Debug\netcoreapp3.0\CQRS.dll
+H:\Programming\Fork\poc1\POC1\Demo\bin\Debug\netcoreapp3.0\CQRS.pdb
+H:\Programming\Fork\poc1\POC1\Demo\obj\Debug\netcoreapp3.0\Demo.csprojAssemblyReference.cache
+H:\Programming\Fork\poc1\POC1\Demo\obj\Debug\netcoreapp3.0\Demo.AssemblyInfoInputs.cache
+H:\Programming\Fork\poc1\POC1\Demo\obj\Debug\netcoreapp3.0\Demo.AssemblyInfo.cs
+H:\Programming\Fork\poc1\POC1\Demo\obj\Debug\netcoreapp3.0\Demo.csproj.CopyComplete
+H:\Programming\Fork\poc1\POC1\Demo\obj\Debug\netcoreapp3.0\Demo.dll
+H:\Programming\Fork\poc1\POC1\Demo\obj\Debug\netcoreapp3.0\Demo.pdb
