@@ -9,7 +9,7 @@ namespace Demo.Persistance.Repository
 {
     public interface IEventRepository
     {
-        Task New(IEvent data);
+        Task<IEvent> New(IEvent data);
     }
 
     public class EventRepository : IEventRepository
@@ -21,7 +21,7 @@ namespace Demo.Persistance.Repository
             this.context = context;
         }
 
-        public async Task New(IEvent data)
+        public async Task<IEvent> New(IEvent data)
         {
             var entity = new Event()
             {
@@ -36,6 +36,8 @@ namespace Demo.Persistance.Repository
             };
             await context.AddAsync(entity);
             await context.SaveChangesAsync();
+            data.Id = entity.Id;
+            return data;
         }
     }
 

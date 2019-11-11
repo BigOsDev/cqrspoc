@@ -15,6 +15,11 @@ namespace Demo.Handlers.Event
     {
         private readonly IServiceProvider serviceProvider;
 
+        public BackgroundProcesor(IServiceProvider serviceProvider)
+        {
+            this.serviceProvider = serviceProvider;
+        }
+
         public void Run<T>(Action<T> action)
         {
             Task.Factory.StartNew(delegate

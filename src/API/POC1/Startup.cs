@@ -43,6 +43,7 @@ namespace POC1
 
             services.AddTransient<IGridValueChangeCommandHandler, GridValueChangeCommandHandler>();
             services.AddTransient<IEventRepository, EventRepository>();
+            services.AddSignalR();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

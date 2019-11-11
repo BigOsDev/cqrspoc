@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "H:\\Programming\\Fork\\poc1\\POC1\\Demo\\Demo.csproj": {}
+    "H:\\Programming\\Fork\\cqrspoc\\src\\API\\Demo\\Demo.csproj": {}
   },
   "projects": {
-    "H:\\Programming\\Fork\\poc1\\POC1\\CQRS\\CQRS.csproj": {
+    "H:\\Programming\\Fork\\cqrspoc\\src\\API\\CQRS\\CQRS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\Programming\\Fork\\poc1\\POC1\\CQRS\\CQRS.csproj",
+        "projectUniqueName": "H:\\Programming\\Fork\\cqrspoc\\src\\API\\CQRS\\CQRS.csproj",
         "projectName": "CQRS",
-        "projectPath": "H:\\Programming\\Fork\\poc1\\POC1\\CQRS\\CQRS.csproj",
+        "projectPath": "H:\\Programming\\Fork\\cqrspoc\\src\\API\\CQRS\\CQRS.csproj",
         "packagesPath": "C:\\Users\\Tomasz\\.nuget\\packages\\",
-        "outputPath": "H:\\Programming\\Fork\\poc1\\POC1\\CQRS\\obj\\",
+        "outputPath": "H:\\Programming\\Fork\\cqrspoc\\src\\API\\CQRS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -59,14 +59,14 @@
         }
       }
     },
-    "H:\\Programming\\Fork\\poc1\\POC1\\Demo\\Demo.csproj": {
+    "H:\\Programming\\Fork\\cqrspoc\\src\\API\\Demo\\Demo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\Programming\\Fork\\poc1\\POC1\\Demo\\Demo.csproj",
+        "projectUniqueName": "H:\\Programming\\Fork\\cqrspoc\\src\\API\\Demo\\Demo.csproj",
         "projectName": "Demo",
-        "projectPath": "H:\\Programming\\Fork\\poc1\\POC1\\Demo\\Demo.csproj",
+        "projectPath": "H:\\Programming\\Fork\\cqrspoc\\src\\API\\Demo\\Demo.csproj",
         "packagesPath": "C:\\Users\\Tomasz\\.nuget\\packages\\",
-        "outputPath": "H:\\Programming\\Fork\\poc1\\POC1\\Demo\\obj\\",
+        "outputPath": "H:\\Programming\\Fork\\cqrspoc\\src\\API\\Demo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -85,8 +85,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "H:\\Programming\\Fork\\poc1\\POC1\\CQRS\\CQRS.csproj": {
-                "projectPath": "H:\\Programming\\Fork\\poc1\\POC1\\CQRS\\CQRS.csproj"
+              "H:\\Programming\\Fork\\cqrspoc\\src\\API\\CQRS\\CQRS.csproj": {
+                "projectPath": "H:\\Programming\\Fork\\cqrspoc\\src\\API\\CQRS\\CQRS.csproj"
               }
             }
           }

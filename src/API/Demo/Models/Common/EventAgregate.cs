@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Demo.Models.Common
 {
-    class EventAgregate : IEvent
+    public class EventAgregate : IEvent
     {
         public int Id { get; set; }
         public int Caller { get; set; }

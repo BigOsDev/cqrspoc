@@ -1,4 +1,5 @@
 ﻿using CQRS.Common.Interfaces;
+using Demo.Handlers.Event;
 using Demo.Models.Common;
 using Demo.Models.Grid;
 using Demo.Persistance.Entities;
@@ -14,15 +15,17 @@ namespace Demo.Handlers.Grid
     public class GridValueChangeCommandHandler : IGridValueChangeCommandHandler
     {
         private readonly IEventRepository eventRepository;
+        private readonly IBackgroundProcesor backgroundProcesor;
 
-        public GridValueChangeCommandHandler(IEventRepository eventRepository)
+        public GridValueChangeCommandHandler(IEventRepository eventRepository, IBackgroundProcesor backgroundProcesor)
         {
             this.eventRepository = eventRepository;
+            this.backgroundProcesor = backgroundProcesor;
         }
 
         public async Task<Result> Handle(GridValueChangeCommand query)
         {
-            await eventRepository.New(new EventAgregate()
+            var addResult = await eventRepository.New(new EventAgregate()
             {
                 EventType = (int)EventType.GridValueChange,
                 AgregateId = query.AgregateId,
@@ -33,6 +36,8 @@ namespace Demo.Handlers.Grid
                 NewValue = query.NewValue,
                 OldValue = query.OldValue
             });
+            //TODO: One more layer? Like factory for events? Pass as id?
+            backgroundProcesor.Run<IEventHandler<IEvent>>(p => p.Handle(addResult));
             return await Task.FromResult(Result.Success());
         }
     }
