@@ -29,7 +29,7 @@ namespace DemoTests
         {
             IServiceCollection services = new ServiceCollection();
             services.AddTransient<IBackgroundProcesor, BackgroundProcesor>();
-            services.AddTransient<IEventHandler<IEvent>, EventHandlerBase>();
+            services.AddTransient<IEventHandler<IEvent>, GridValueChangeEventHandler>();
             serviceProvider = services.BuildServiceProvider();
         }
 

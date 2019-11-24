@@ -15,19 +15,19 @@ namespace POC1.Notification
 
         public EventNotifications() : base()
         {
-            valueChangedEventDelegate += ValueChangedEventDelegate;
+           // valueChangedEventDelegate += ValueChangedEventDelegate;
         }
 
-        private async Task ValueChangedEventDelegate(IEvent @event)
-        {
-            //TODO: trycatch
-            await SendNotification(@event);
-        }
+        //public static async Task ValueChangedEventDelegate(IEvent @event)
+        //{
+        //    var context = Startup.ConnectionManager.GetHubContext<SomeHub>();
+        //    context.Clients.All.someMethod();
+        //}
 
         public async Task SendNotification(IEvent @event)
         {
             //TODO: users to notify
-            await Clients.All.SendAsync(@event.EventType.ToString(), @event.AgregateType, @event.AgregateId, @event.NewValue);
+            await Clients.All.SendAsync("SendNotification", @event.EventType.ToString(), @event.AgregateType, @event.AgregateId, @event.NewValue);
         }
     }
 }

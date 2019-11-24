@@ -8,3 +8,14 @@ src/API/POC1/obj
 src/API/Tests/DemoTests/bin
 src/API/Tests/DemoTests/obj
 src/API/POC1/obj
+src/API/CQRS/obj/Debug/netcoreapp3.0/CQRS.csprojAssemblyReference.cache
+src/API/Demo/bin/Debug
+src/API/CQRS/obj
+src/API/POC1/bin/Debug
+src/API/POC1/bin/Debug
+src/API/POC1/obj
+src/API/CQRS/obj
+src/API/Demo/bin
+src/API/Demo/obj
+src/API/POC1/bin
+src/API/POC1/obj

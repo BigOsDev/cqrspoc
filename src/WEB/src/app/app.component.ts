@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { HubConnection, HubConnectionBuilder,HttpTransportType,LogLevel} from '@aspnet/signalr';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent {
   title = 'app';
+
+  private hubConnection: HubConnection;
 
   constructor(private http: HttpClient) {
 
@@ -45,11 +48,23 @@ export class AppComponent {
   // ];
 
   ngOnInit() {
-    this.http.get('https://localhost:5001/weatherforecast').subscribe(data=> this.rowData =  (data as any).result);
+    this.http.get('https://localhost:5001/weatherforecast').subscribe(data=>
+     this.rowData =  (data as any).result.result
+     );
+
+     let builder = new HubConnectionBuilder();
+     
+     this.hubConnection = builder.configureLogging(LogLevel.Debug).withUrl('https://localhost:5001/eventNotifications', {skipNegotiation: true,  transport: HttpTransportType.WebSockets}).build();  // see startup.cs
+     this.hubConnection.on('SendNotification', (message) => {
+     
+       console.log(message);
+     });
+     this.hubConnection.start();
   }
 
   onCellValueChanged(params) {
     console.log(params);
+    this.http.post('https://localhost:5001/weatherforecast',null);
   }
   
 }

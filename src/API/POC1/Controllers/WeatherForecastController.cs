@@ -16,13 +16,14 @@ namespace POC1.Controllers
     public class WeatherForecastController : ControllerBase
     {
 
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger<WeatherForecastController> logger;
 
         private readonly IGridValueChangeCommandHandler gridValueChangedCommandChandler;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, IGridValueChangeCommandHandler gridValueChangedCommandChandler)
         {
-            _logger = logger;
+            this.logger = logger;
+            this.gridValueChangedCommandChandler = gridValueChangedCommandChandler;
         }
 
         [HttpGet]

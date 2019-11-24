@@ -8,6 +8,11 @@ namespace Demo.Persistance
 {
    public  class DemoContext : DbContext
     {
+        public DemoContext(DbContextOptions<DemoContext> options)
+               : base(options)
+        {
+        }
+
         public DbSet<Event> Events { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using CQRS.Common.Interfaces;
+using Demo.Handlers.Providers;
 using Demo.Models.Common;
 using System;
 using System.Collections.Generic;
@@ -9,18 +10,19 @@ namespace Demo.Handlers.Event
 {
     public class GridValueChangeEventHandler : IEventHandler<IEvent>
     {
-        private readonly ValueChangedEventDelegate valueChangedEventDelegate;
-        public GridValueChangeEventHandler(ValueChangedEventDelegate valueChangedEventDelegate)
+        private readonly IValueChangedEventDelegateProvider valueChangedEventDelegate;
+        public GridValueChangeEventHandler(IValueChangedEventDelegateProvider valueChangedEventDelegate)
         {
             this.valueChangedEventDelegate = valueChangedEventDelegate;
         }
 
-        public async Task Handle(IEvent @event)
+        public Task Handle(IEvent @event)
         {
             //TODO: Update Agregate model.
 
             //TODO: use another model for events! 
-            await valueChangedEventDelegate(@event);
+            valueChangedEventDelegate.ValueChangedEventDelegate(@event);
+            return Task.CompletedTask;
 
 
         }
